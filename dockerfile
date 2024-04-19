@@ -6,7 +6,7 @@ WORKDIR /jmeter
 ENV JMETER_VERSION 5.6.3
 
 # INSTALAR D3EPENDENCIAS
-RUN apk add --no-cache openjdk11 curl unzip nano msttcorefonts-installer fontconfig
+RUN apk add --no-cache openjdk11 curl unzip nano msttcorefonts-installer fontconfig python3
 RUN update-ms-fonts
 
 # ESTABLECER VARIABLES DE ENTORNO PARA JAVA

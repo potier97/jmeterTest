@@ -1,5 +1,5 @@
 #!/bin/sh
-# Ejemplo de ejecución 
+# Ejemplo de ejecución  > ./generate-results.sh resultados_prueba results-performance.csv  results.csv
 
 # Asignar el nombre de la carpeta donde se va a guardar los reportes
 folder_name="$1"

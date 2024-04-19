@@ -29,7 +29,7 @@ jmeter -n -t <path_to_jmx_file> -l <path_to_output_file>
 > Asegurese de que el archivo de resultados o salida no exista
 
 
-### Geenrar reporte de resultados
+### Generar reporte de resultados HTML
 
 ```bash
 jmeter  -g <path_to_output_file>  -o <path_to_folder_empty>
