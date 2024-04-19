@@ -20,6 +20,34 @@ Tener en cuenta que esto se hace de acuerdo a lo sugerido por la documentación 
 
 ---
 
+### Ejecución Rapida
+
+Para correr pruebas de acuerdo a un plan creado en la GUI de JMETER, ejecute el script `generate-test.sh` ubicado en la carpera de `jmeter_scripts` con el siguiente comando:
+
+```bash
+./generate-test.sh ./First.jmx scenario 100 10
+```
+Los parametros corresponden a: 
+- `./First.jmx` : Ruta del archivo de plan de pruebas .jmx
+- `scenario` : Nombre del escenario de pruebas en el que se guardarán los resultados de cada iteración
+- `100` : Cantidad de hilos a simular (threads)
+- `10` : Aceleración de la prueba (s)
+
+
+
+
+ >  Tenga en cuenta que necesita los siguientes plugins para correr las pruebas, estos estan configurados en la imagen de Dockerfile:
+ >   - GRAPHS GENERATOR LISTENER
+ >   - PERFMON (SERVERS PERFORMANCE MONITORING)
+ >   - COMMAND-LINE GRAPH PLOTTING TOOL
+ >   - 3 BASIC GRAPHS - Average Response Time - Active Threads - Successful/Failed Transactions
+ >   - 5 ADDITIONAL GRAPHS - Response Codes- Bytes Throughput - Connect Times - Latency - Hits/s
+ >   - Synthesis Report
+ >   - Filter Results Tool
+
+
+---
+
 ### Instrucciones para correr pruebas de JMetercon el cli
 
 ```bash

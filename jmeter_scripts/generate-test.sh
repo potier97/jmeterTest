@@ -1,5 +1,5 @@
 #!/bin/sh
-# Ejemplo de ejecucion
+# Ejemplo de ejecucion > ./generate-test.sh plan_de_pruebas carpeta_de_resultados numero_de_hilos ramp_up
 
 # plan de pruebas - archivo .jmx
 PLAN_TEST="$1"
