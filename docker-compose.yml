@@ -1,13 +1,34 @@
 version: '3.8'
 
 services:
-  pyapp:
-    image: python:3.9-alpine
+  jmeter:
+    build: .
+    container_name: jmeter
+    restart: always
     volumes:
-      - .:/app
-    command: tail -f /dev/null
+      - ./jmeter_scripts:/jmeter/jmeter_scripts
     stdin_open: true
     ports:
-      - "5000:5000"
+      - "6000:6000"
     tty: true
-    
+    networks:
+      - jmeter-network
+
+  #Test para agente de performance
+  jmeterdos:
+    build: .
+    container_name: jmeterdos
+    restart: always
+    ports:
+      - "4444:4444"
+    tty: true
+    networks:
+      - jmeter-network
+
+networks:
+  jmeter-network:
+    driver: bridge
+
+# VOLUMEN ANONIMO
+# volumes:
+#   jmeter_scripts:
